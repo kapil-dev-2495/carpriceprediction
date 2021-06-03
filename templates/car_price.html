@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+	.btn{
+		background: linear-gradient(to bottom right, red, blue);
+		color: white;
+	}
+	/*.top{
+		margin-top: 100px;
+	}*/
+	.fform{
+		/*background-color: #340078;*/
+		background-color: #eee;
+		padding: 50px;
+		margin-top: 70px;
+
+	}
+	.heading{
+		background-color: #28015c;
+		padding: 10px;
+		color: white;
+		text-align: center;
+	}
+	.top {
+		position: relative;
+		margin-top:100px;
+	}
+	body {
+		background: url('https://unsplash.com/photos/a4S6KUuLeoM/download?force=true');
+
+		background-size: cover;
+	}
+
+</style>
+</head>
+<body style="background-repeat: no-repeat;background-attachment: fixed; background-size: 100% 100%; background-attachment: fixed;">
+	<div class="col-lg-12">
+		<div class="container">
+			<div class="col-lg-5 top">
+				<div class="col-lg-12 heading">
+					<h3><b>Enter your Car details</b></h3>
+				</div>
+				<form class="form fform"action="http://127.0.0.1:5000/predict" method="post">
+					<div class="form-group">
+						<input type="text" name="Car Company name" placeholder="Enter your Car Company Name" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="number" name="Year" placeholder="Enter Year" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="number" name="Present_Price" step="0.5" placeholder="Enter Present_Price" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="number" name="Kms_driven" placeholder="Enter Kms_driven" class="form-control">
+					</div>
+					<div class =form-group>
+						<b>Transmission: &ensp; </b>
+						<input type="radio" name="Transmission" value="Manual" > Manual &ensp; 
+						<input type="radio" name="Transmission" value="Automatic"> Automatic
+			
+					</div>
+					<div class=form-group>
+						<b>Fuel Type: &ensp; </b>
+						<input type="radio" name="Fuel_Type" value="Diesel"> Diesel &ensp; 
+						<input type="radio" name="Fuel_Type" value="Petrol"> Petrol &ensp; 
+						<input type="radio" name="Fuel_Type" value="CNG"> CNG
+					</div>
+
+					<div class="form-group">
+						<input type="submit" name="submit" value="Submit" class="btn btn-md">
+					</div>
+					<div class="form-group">
+						<b>You can sell your car for: {{selling_price}}</b>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
