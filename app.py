@@ -1,5 +1,4 @@
 from flask import Flask,render_template,request
-import requests
 import pickle
 import numpy as np
 import pandas
